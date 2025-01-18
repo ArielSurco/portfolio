@@ -1,0 +1,46 @@
+---
+import { getLangFromUrl, useTranslations } from "../i18n/utils"
+import LanguagePicker from "./language-picker.astro"
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+
+interface Link {
+  name: string
+  href: string
+}
+
+const links: Link[] = [
+  {
+    name: t('nav.home'),
+    href: '#'
+  },
+  {
+    name: t('nav.about'),
+    href: '#'
+  },
+  {
+    name: t('nav.skills'),
+    href: '#'
+  },
+  {
+    name: t('nav.projects'),
+    href: '#'
+  },
+  {
+    name: t('nav.contact'),
+    href: '#'
+  }
+]
+---
+
+<nav class="bg-black min-h-fit w-full text-white px-4 py-3 shadow">
+  <div class="max-w-[1200px] flex gap-3 items-center justify-between w-full mx-auto">
+    <div class="flex gap-3">
+      {links.map((link) => (
+        <a class="hover:text-slate-200" href={link.href} >{link.name}</a>
+      ))}
+    </div>
+    <LanguagePicker/>
+  </div>
+</nav>

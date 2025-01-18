@@ -1,0 +1,13 @@
+---
+import { translations } from "../i18n/translations";
+import { getLangFromUrl } from "../i18n/utils";
+import { cn } from '../utils/cn'
+
+const selectedLang = getLangFromUrl(Astro.url)
+---
+
+<div class="bg-slate-200 rounded-full overflow-hidden">
+  {Object.keys(translations).map((lang) => (
+    <a href={`/${lang}`} class={cn(selectedLang === lang && 'bg-indigo-500', 'py-2 px-3')}>{lang.toUpperCase()}</a>
+  ))}
+</div>

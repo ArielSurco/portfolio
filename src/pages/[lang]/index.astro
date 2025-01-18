@@ -1,0 +1,26 @@
+---
+import { getLangFromUrl, useTranslations } from "../../i18n/utils";
+import Layout from "../../layouts/Layout.astro";
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'es' } },
+    { params: { lang: 'en' } }
+  ]
+}
+
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
+---
+
+<Layout>
+  <section class="w-full max-w-[1200px] h-[calc(100vh-48px)] max-h-[600px] flex mx-auto items-center gap-10">
+    <div class="basis-1/2">
+      <h1 class="uppercase text-3xl mb-10">{t('home.title')}</h1>
+      <h2 class="text-xl">{t('home.description')}</h2>
+    </div>
+    <div class="basis-1/2">
+      Some of the frameworks I know
+    </div>
+  </section>
+</Layout>
