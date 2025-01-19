@@ -34,11 +34,11 @@ const links: Link[] = [
 ]
 ---
 
-<nav class="bg-black min-h-fit w-full text-white px-4 py-3 shadow">
+<nav class="bg-neutral-900 min-h-fit w-full text-white p-4 shadow-xl">
   <div class="max-w-[1200px] flex gap-3 items-center justify-between w-full mx-auto">
     <div class="flex gap-3">
       {links.map((link) => (
-        <a class="hover:text-slate-200" href={link.href} >{link.name}</a>
+        <a class="hover:text-slate-200 text-xl hover:underline decoration-transparent hover:decoration-teal-400 underline-offset-4 transition-all duration-500" href={link.href} >{link.name}</a>
       ))}
     </div>
     <LanguagePicker/>
