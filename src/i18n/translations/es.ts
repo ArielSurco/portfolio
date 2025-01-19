@@ -7,5 +7,9 @@ export const translations = {
   'nav.projects': 'Proyectos',
   'nav.contact': 'Contacto',
   'home.title': 'Frontend developer',
-  'home.description': '¡Hola, soy Ariel! Me encanta crear soluciones mediante código. Tengo experiencia laboral en Frontend, pero también tengo conocimientos sobre backend, scraping y creando bots'
+  'home.description': '¡Hola, soy Ariel! Me encanta crear soluciones mediante código. Tengo experiencia laboral en Frontend, pero también tengo conocimientos sobre backend, scraping y creando bots',
+  'about.title': 'Sobre mí',
+  'skills.title': 'Habilidades',
+  'projects.title': 'Proyectos',
+  'contact.title': 'Contacto'
 } as const satisfies Translations

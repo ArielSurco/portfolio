@@ -13,30 +13,30 @@ interface Link {
 const links: Link[] = [
   {
     name: t('nav.home'),
-    href: '#'
+    href: '#home'
   },
   {
     name: t('nav.about'),
-    href: '#'
+    href: '#about'
   },
   {
     name: t('nav.skills'),
-    href: '#'
+    href: '#skills'
   },
   {
     name: t('nav.projects'),
-    href: '#'
+    href: '#projects'
   },
   {
     name: t('nav.contact'),
-    href: '#'
+    href: '#contact'
   }
 ]
 ---
 
-<nav class="bg-neutral-900 min-h-fit w-full text-white p-4 shadow-xl">
+<nav class="bg-neutral-900 min-h-fit w-full text-white p-4 shadow-xl sticky top-0 z-10">
   <div class="max-w-[1200px] flex gap-3 items-center justify-between w-full mx-auto">
-    <div class="flex gap-3">
+    <div class="flex gap-6">
       {links.map((link) => (
         <a class="hover:text-slate-200 text-xl hover:underline decoration-transparent hover:decoration-teal-400 underline-offset-4 transition-all duration-500" href={link.href} >{link.name}</a>
       ))}
