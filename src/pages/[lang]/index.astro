@@ -3,6 +3,8 @@ import { Image } from "astro:assets";
 import { getLangFromUrl, useTranslations } from "../../i18n/utils";
 import Layout from "../../layouts/Layout.astro";
 import HomeBackground from '../../assets/home-background.jpg'
+import Section from "../../components/section.astro";
+import SectionTitle from "../../components/section-title.astro";
 
 export function getStaticPaths() {
   return [
@@ -27,28 +29,28 @@ const t = useTranslations(lang)
   </section>
 
   <div class="w-full max-w-[1200px] mx-auto">
-    <section id="about" class="h-96 py-20 text-slate-100">
-      <h2 class="text-4xl text-center font-semibold">
-        {t('about.title')}
-      </h2>
+     <Section id="about">
+      <SectionTitle>
+         {t('about.title')}
+      </SectionTitle>
       <p>
-
+          
       </p>
-    </section>
-    <section id="skills" class="h-96">
-      <h2 class="text-2xl">
+    </Section>
+    <Section id="skills">
+      <SectionTitle>
         {t('skills.title')}
-      </h2>
-    </section>
-    <section id="projects" class="h-96">
-      <h2 class="text-2xl">
+      </SectionTitle>
+    </Section>
+    <Section id="projects">
+      <SectionTitle>
         {t('projects.title')}
-      </h2>
-    </section>
-    <section id="contact" class="h-96">
-      <h2 class="text-2xl">
+      </SectionTitle>
+    </Section>
+    <Section id="contact">
+      <SectionTitle>
         {t('contact.title')}
-      </h2>
-    </section>
+      </SectionTitle>
+    </Section>
   </div>
 </Layout>
