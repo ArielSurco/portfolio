@@ -11,5 +11,9 @@ export const translations = {
   'about.title': 'Sobre mí',
   'skills.title': 'Habilidades',
   'projects.title': 'Proyectos',
-  'contact.title': 'Contacto'
+  'contact.title': 'Contacto',
+  'contact.github.alt': 'Perfil de Github',
+  'contact.linkedin.alt': 'Perfil de Linkedin',
+  'contact.download.alt': 'Curriculum',
+  'contact.email.alt': 'Email'
 } as const satisfies Translations
