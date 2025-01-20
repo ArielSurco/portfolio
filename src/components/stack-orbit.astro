@@ -1,9 +1,9 @@
 ---
 import { Image } from "astro:assets";
-import GithubLogo from '../assets/github-logo.svg'
-import LinkedinLogo from '../assets/linkedin-logo.svg'
+import NodeJSLogo from '../assets/nodejs-logo.svg'
+import TypescriptLogo from '../assets/typescript-logo.svg'
 import NextJSLogo from '../assets/nextjs-logo.svg'
-import DownloadIcon from '../assets/download-icon.svg'
+import ResumeIcon from '../assets/resume-icon.svg'
 
 interface Props {
   electronColor?: string;
@@ -24,16 +24,16 @@ const {
   <div class="orbit-container">
     <div class="atom">
       <div class="electron">
-        <Image src={GithubLogo} alt="Github" class="electron-icon" width={30} height={30} />
+        <Image src={NodeJSLogo} alt="NodeJS" class="electron-icon" width={40} height={40} />
       </div>
       <div class="electron">
-        <Image src={LinkedinLogo} alt="LinkedIn" class="electron-icon" width={30} height={30} />
+        <Image src={TypescriptLogo} alt="Typescript" class="electron-icon" width={30} height={30} />
       </div>
       <div class="electron">
-        <Image src={NextJSLogo} alt="NextJS" class="electron-icon" width={30} height={30} />
+        <Image src={NextJSLogo} alt="NextJS" class="electron-icon" width={40} height={40} />
       </div>
       <a href='/Ariel Surco - CV.pdf' class="nucleus grid place-items-center" target="_blank">
-        <Image src={DownloadIcon} alt="Download CV" class="" width={30} height={30} />
+        <Image src={ResumeIcon} alt="Download CV" class="" width={35} height={35} />
       </a>
     </div>
   </div>
