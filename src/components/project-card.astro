@@ -1,0 +1,39 @@
+---
+import { Image } from 'astro:assets'
+
+interface Props {
+  title: string
+  description: string
+  image: string
+  demoLink: string
+  githubLink: string
+  technologies: string[]
+}
+
+const { title, description, image, demoLink, githubLink, technologies } = Astro.props
+---
+
+<article class="bg-neutral-900 rounded-2xl w-full max-w-[400px]">
+  <header>
+    <Image
+      src={image}
+      alt={title}
+      width={400}
+      height={250}
+      class="rounded-t-2xl w-full max-h-[250px] object-cover"
+    />
+  </header>
+  <div class="flex flex-col gap-4 px-6 pt-6">
+    <h2 class="text-2xl font-semibold text-teal-400">{title}</h2>
+    <p class="text-base text-slate-100">{description}</p>
+    <div class="flex flex-wrap gap-2">
+      {technologies.map((technology) => (
+        <span class="text-sm bg-slate-800 px-2 py-1 rounded-md">{technology}</span>
+      ))}
+    </div>
+  </div>
+  <footer class="flex gap-4 p-6">
+    <a class="text-base text-slate-100 border border-teal-400 px-2 py-1 rounded-md hover:bg-teal-400 hover:text-neutral-900 transition-all duration-300" href={demoLink} target="_blank">Demo</a>
+    <a class="text-base text-slate-100 border border-teal-400 px-2 py-1 rounded-md hover:bg-teal-400 hover:text-neutral-900 transition-all duration-300" href={githubLink} target="_blank">Github</a>
+  </footer>
+</article>
