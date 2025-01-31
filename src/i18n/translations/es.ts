@@ -11,6 +11,7 @@ export const translations = {
   'home.description': '¡Hola, soy Ariel! Me encanta crear soluciones mediante código. Tengo experiencia laboral en Frontend, pero también tengo conocimientos sobre backend, scraping y creando bots',
   'experience.title': 'Experiencia',
   'about.title': 'Sobre mí',
+  'about.description': 'Desde los 16 años, he estado sumergido en el mundo de la programación, explorando desde proyectos pequeños hasta soluciones más complejas. Mi interés por la tecnología siempre ha estado impulsado por el desafío de encontrar soluciones eficientes a problemas reales. En 2023, comencé mi carrera profesional como desarrollador frontend, donde pude aplicar mis conocimientos y aprender nuevas herramientas para enfrentar retos técnicos en proyectos reales.\n\nMe motiva la posibilidad de resolver problemas de manera creativa y práctica. Un ejemplo de ello es un bot de WhatsApp que desarrollé para gestionar grandes grupos, mejorando la organización y la interacción de manera efectiva. Mi objetivo es seguir perfeccionando mis habilidades y crear soluciones que tengan un impacto real.',
   'skills.title': 'Habilidades',
   'projects.title': 'Proyectos',
   'contact.title': 'Contacto',
