@@ -9,6 +9,10 @@ export const getLinks = <T extends Function>(t: T): Link[] => [
     href: '#home'
   },
   {
+    name: t('nav.experience'),
+    href: '#experience'
+  },
+  {
     name: t('nav.about'),
     href: '#about'
   },

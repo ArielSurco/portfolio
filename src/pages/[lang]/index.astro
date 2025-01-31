@@ -9,6 +9,7 @@ import StackOrbit from "../../components/stack-orbit.astro";
 import { skills } from "../../constants/skills";
 import SkillItem from "../../components/skill-item.astro";
 import ProjectCard from "../../components/project-card.astro";
+import ExperienceItem from "../../components/experience-item.astro";
 
 export function getStaticPaths() {
   return [
@@ -43,6 +44,19 @@ const t = useTranslations(lang)
   <div class="relative overflow-hidden">
     <div class="sections-container w-full h-full top-0 z-0 absolute"/>
     <main class="w-full max-w-[1200px] mx-auto flex flex-col gap-20 py-20">
+      <Section id="experience">
+        <SectionTitle>
+          {t('experience.title')}
+        </SectionTitle>
+        <div class="max-w-[900px] px-8 w-full">
+          <ExperienceItem
+            jobTitle={t('experience.item-1.jobTitle')}
+            company={t('experience.item-1.company')}
+            startDate={new Date()}
+            description={t('experience.item-1.description')}
+          />
+        </div>
+      </Section>
       <Section id="about">
         <SectionTitle>
           {t('about.title')}
