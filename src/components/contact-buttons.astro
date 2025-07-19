@@ -7,6 +7,7 @@ import DownloadIcon from '../assets/download-icon.svg'
 import EmailIcon from '../assets/email-icon.svg'
 import { useTranslations } from '../i18n/utils'
 import { getLangFromUrl } from '../i18n/utils'
+import { getCVUrl } from '../utils/getCVUrl'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -24,7 +25,7 @@ const contactLinks = [
   },
   {
     icon: DownloadIcon,
-    href: '/Ariel Surco - CV.pdf',
+    href: getCVUrl(lang),
     alt: t('contact.download.alt')
   },
   {
