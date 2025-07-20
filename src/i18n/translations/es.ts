@@ -20,6 +20,9 @@ export const translations = {
   'contact.download.alt': 'Curriculum',
   'contact.email.alt': 'Email',
   'experience.item-1.jobTitle': 'Desarrollador Frontend',
-  'experience.item-1.company': 'Midas Consultores',
-  'experience.item-1.description': `Investigación e implementación de la arquitectura de Micro-Frontends para la reingeniería de un conjunto de proyectos internos de una empresa líder en el sector petrolero.\nDesarrollo de la reingeniería de la web de una fintech especializada en las inversiones y trading en el Mercado de Valores, donde cumplí el rol de líder técnico y desarrollador frontend.`
+  'experience.item-1.company': 'Aditi Consulting',
+  'experience.item-1.description': `Participé en la migración de un sistema interno de gran escala para una empresa de telecomunicaciones en Argentina, utilizando Micro Frontends con ReactJS y TypeScript.\nMejoré la escalabilidad de la librería de componentes, promoviendo la adopción de nuevos estándares de desarrollo en el equipo mediante buenas prácticas y patrones de diseño que mejoraron la calidad y la mantenibilidad del código.`,
+  'experience.item-2.jobTitle': 'Desarrollador Frontend',
+  'experience.item-2.company': 'Midas Consultores',
+  'experience.item-2.description': `Investigación e implementación de la arquitectura de Micro-Frontends para la reingeniería de un conjunto de proyectos internos de una empresa líder en el sector petrolero.\nDesarrollo de la reingeniería de la web de una fintech especializada en las inversiones y trading en el Mercado de Valores, donde cumplí el rol de líder técnico y desarrollador frontend.`
 } as const satisfies Translations

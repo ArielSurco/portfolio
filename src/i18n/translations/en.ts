@@ -20,6 +20,9 @@ export const translations = {
   'contact.download.alt': 'Curriculum',
   'contact.email.alt': 'Email',
   'experience.item-1.jobTitle': 'Frontend Developer',
-  'experience.item-1.company': 'Midas Consultores',
-  'experience.item-1.description': `Research and implementation of a Micro-Frontends architecture for the reengineering of a set of internal projects for a leading company in the oil sector.\nDevelopment of the reengineering of the web of a fintech specialized in investments and trading in the Stock Market, where I fulfilled the role of technical leader and frontend developer.`
+  'experience.item-1.company': 'Aditi Consulting',
+  'experience.item-1.description': `Contributed to the migration of a large-scale internal system for a telecom company in Argentina using Micro Frontends with ReactJS and Typescript.\nImproved the scalability of the component library, driving the adoption of new development standards through best practices and design patterns that enhanced code quality and maintainability.`,
+  'experience.item-2.jobTitle': 'Frontend Developer',
+  'experience.item-2.company': 'Midas Consultores',
+  'experience.item-2.description': `Research and implementation of a Micro-Frontends architecture for the reengineering of a set of internal projects for a leading company in the oil sector.\nDevelopment of the reengineering of the web of a fintech specialized in investments and trading in the Stock Market, where I fulfilled the role of technical leader and frontend developer.`,
 } as const satisfies Translations
