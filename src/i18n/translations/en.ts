@@ -17,7 +17,7 @@ export const translations = {
   'contact.title': 'Contact',
   'contact.github.alt': 'Github profile',
   'contact.linkedin.alt': 'Linkedin profile',
-  'contact.download.alt': 'Curriculum',
+  'contact.download.alt': 'Download CV',
   'contact.email.alt': 'Email',
   'experience.item-1.jobTitle': 'Frontend Developer',
   'experience.item-1.company': 'Aditi Consulting',

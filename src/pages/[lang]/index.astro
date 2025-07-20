@@ -43,8 +43,8 @@ const t = useTranslations(lang)
 
   <div class="relative overflow-hidden">
     <div class="sections-container w-full h-full top-0 z-0 absolute"/>
-    <main class="w-full max-w-[1200px] mx-auto flex flex-col gap-20 py-20">
-      <Section id="about" class="px-8">
+    <main class="w-full max-w-[1200px] mx-auto pb-20">
+      <Section id="about" class="px-8 pt-20">
         <SectionTitle>
           {t('about.title')}
         </SectionTitle>
@@ -52,7 +52,7 @@ const t = useTranslations(lang)
           {t('about.description')}
         </p>
       </Section>
-      <Section id="experience">
+      <Section id="experience" class="pt-20">
         <SectionTitle>
           {t('experience.title')}
         </SectionTitle>
@@ -73,7 +73,7 @@ const t = useTranslations(lang)
           />
         </div>
       </Section>
-      <Section id="skills">
+      <Section id="skills" class="pt-20">
         <SectionTitle>
           {t('skills.title')}
         </SectionTitle>
@@ -83,7 +83,7 @@ const t = useTranslations(lang)
           ))}
         </div>
       </Section>
-      <Section id="projects" class="px-8">
+      <Section id="projects" class="px-8 pt-20">
         <SectionTitle>
           {t('projects.title')}
         </SectionTitle>
@@ -114,7 +114,7 @@ const t = useTranslations(lang)
           />
         </div>
       </Section>
-      <Section id="contact">
+      <Section id="contact" class="pt-20">
         <SectionTitle>
           {t('contact.title')}
         </SectionTitle>

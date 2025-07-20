@@ -4,7 +4,7 @@ import NodeJSLogo from '../assets/nodejs-logo.svg'
 import TypescriptLogo from '../assets/typescript-logo.svg'
 import NextJSLogo from '../assets/nextjs-logo.svg'
 import ResumeIcon from '../assets/resume-icon.svg'
-import { getLangFromUrl } from "../i18n/utils";
+import { getLangFromUrl, useTranslations } from "../i18n/utils";
 import { getCVUrl } from '../utils/getCVUrl'
 
 interface Props {
@@ -22,6 +22,7 @@ const {
 } = Astro.props;
 
 const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 
 ---
 
@@ -37,7 +38,7 @@ const lang = getLangFromUrl(Astro.url)
       <div class="electron">
         <Image src={NextJSLogo} alt="NextJS" class="electron-icon" width={40} height={40} />
       </div>
-      <a href={getCVUrl(lang)} class="nucleus grid place-items-center" target="_blank">
+      <a href={getCVUrl(lang)} class="nucleus grid place-items-center" target="_blank" title={t('contact.download.alt')}>
         <Image src={ResumeIcon} alt="Download CV" class="" width={35} height={35} />
       </a>
     </div>
