@@ -10,10 +10,6 @@ export default defineConfig({
     locales: ['es', 'en'],
     routing: {
       prefixDefaultLocale: true,
-      redirectToDefaultLocale: false
     },
   },
-  redirects: {
-    '/': '/en'
-  }
 });

@@ -1,5 +1,7 @@
 ---
-const redirectLocale = Astro.preferredLocaleList?.[0] ?? 'en'
-
-Astro.redirect(`/${redirectLocale}`)
+import Layout from "../layouts/Layout.astro";
 ---
+
+<Layout>
+  <h1>Home</h1>
+</Layout>
