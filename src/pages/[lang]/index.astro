@@ -6,11 +6,10 @@ import HomeBackground from '../../assets/home-background.jpg'
 import Section from "../../components/section.astro";
 import SectionTitle from "../../components/section-title.astro";
 import StackOrbit from "../../components/stack-orbit.astro";
-import { skills } from "../../constants/skills";
-import SkillItem from "../../components/skill-item.astro";
 import ProjectCard from "../../components/project-card.astro";
 import ExperienceItem from "../../components/experience-item.astro";
 import type { ComponentProps } from "astro/types";
+import { SkillsSectionContent } from "../../components/skills-section-content";
 
 export function getStaticPaths() {
   return [
@@ -87,11 +86,7 @@ const experienceItems: ComponentProps<typeof ExperienceItem>[] = [
         <SectionTitle>
           {t('skills.title')}
         </SectionTitle>
-        <div class="grid md:grid-cols-7 sm:grid-cols-5 grid-cols-4 gap-10 max-w-fit px-8">
-          {skills.map((skill) => (
-            <SkillItem src={skill.src} title={skill.title} />
-          ))}
-        </div>
+        <SkillsSectionContent client:load />
       </Section>
       <Section id="projects" class="px-8 pt-20">
         <SectionTitle>
