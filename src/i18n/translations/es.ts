@@ -19,6 +19,7 @@ export const translations = {
   'contact.linkedin.alt': 'Perfil de Linkedin',
   'contact.download.alt': 'Descargar CV',
   'contact.email.alt': 'Email',
+  'experience.item.currentJob': 'Actualidad',
   'experience.item-1.jobTitle': 'Desarrollador Frontend',
   'experience.item-1.company': 'Aditi Consulting',
   'experience.item-1.description': `Participé en la migración de un sistema interno de gran escala para una empresa de telecomunicaciones en Argentina, utilizando Micro Frontends con ReactJS y TypeScript.\nMejoré la escalabilidad de la librería de componentes, promoviendo la adopción de nuevos estándares de desarrollo en el equipo mediante buenas prácticas y patrones de diseño que mejoraron la calidad y la mantenibilidad del código.`,

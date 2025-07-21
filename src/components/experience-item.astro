@@ -1,5 +1,5 @@
 ---
-import { getLangFromUrl } from '../i18n/utils'
+import { getLangFromUrl, useTranslations } from '../i18n/utils'
 import { cn } from '../utils/cn'
 
 interface Props {
@@ -9,11 +9,13 @@ interface Props {
   endDate?: Date
   description: string
   position: 'first' | 'middle' | 'last'
+  isCurrentJob?: boolean
 }
 
-const { jobTitle, company, startDate, endDate, description, position } = Astro.props
+const { jobTitle, company, startDate, endDate, description, position, isCurrentJob } = Astro.props
 
 const locale = getLangFromUrl(Astro.url)
+const t = useTranslations(locale)
 
 const formatterLocale = locale === 'es' ? 'es-ES' : 'en-US'
 const dateFormatter = new Intl.DateTimeFormat(formatterLocale, { year: 'numeric', month: 'long' })
@@ -22,12 +24,12 @@ const dateFormatter = new Intl.DateTimeFormat(formatterLocale, { year: 'numeric'
 <article class={'flex gap-4 h-fit w-full'}>
   <div class={"flex flex-col items-center mt-1"}>
     <div class="rounded-full border border-slate-400 w-6 min-h-6 flex items-center justify-center">
-      <span class={cn("rounded-full w-4 min-h-4 flex items-center justify-center", position === 'first' ? 'bg-teal-500 animate-pulse' : 'bg-slate-400')} />
+      <span class={cn("rounded-full w-4 min-h-4 flex items-center justify-center", isCurrentJob ? 'bg-teal-500 animate-pulse' : 'bg-slate-400')} />
     </div>
     <span class="w-[1px] h-full bg-slate-500"/>
   </div>
-  <div class={cn("grow flex flex-col gap-2", position !== 'last' && 'pb-4')}>
-    <header class="flex flex-col gap-2 justify-center">
+  <div class={cn("grow flex flex-col gap-1", position !== 'last' && 'pb-4')}>
+    <header class="flex flex-col gap-1 justify-center">
       <div class="inline-block items-center gap-2">
         <h2 class="text-2xl font-bold text-teal-400 inline">{jobTitle}</h2>
         <span class="text-xl font-medium inline">-</span>
@@ -36,7 +38,7 @@ const dateFormatter = new Intl.DateTimeFormat(formatterLocale, { year: 'numeric'
       <div class="flex items-center gap-2 text-sm text-slate-300">
         <span class="capitalize case">{dateFormatter.format(startDate)}</span>
         <span>-</span>
-        <span class="capitalize">{endDate ? dateFormatter.format(endDate) : 'Actualidad'}</span>
+        <span class="capitalize">{endDate ? dateFormatter.format(endDate) : t('experience.item.currentJob')}</span>
       </div>
     </header>
     <p class="text-base text-slate-100 whitespace-pre-line">{description}</p>

@@ -10,6 +10,7 @@ import { skills } from "../../constants/skills";
 import SkillItem from "../../components/skill-item.astro";
 import ProjectCard from "../../components/project-card.astro";
 import ExperienceItem from "../../components/experience-item.astro";
+import type { ComponentProps } from "astro/types";
 
 export function getStaticPaths() {
   return [
@@ -20,6 +21,26 @@ export function getStaticPaths() {
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
+
+const experienceItems: ComponentProps<typeof ExperienceItem>[] = [
+  {
+    jobTitle: t('experience.item-1.jobTitle'),
+    company: t('experience.item-1.company'),
+    startDate: new Date('2025-04-07'),
+    description: t('experience.item-1.description'),
+    position: 'first',
+    isCurrentJob: true
+  },
+  {
+    jobTitle: t('experience.item-2.jobTitle'),
+    company: t('experience.item-2.company'),
+    startDate: new Date('2022-04-07'),
+    description: t('experience.item-2.description'),
+    position: 'last',
+    endDate: new Date('2025-04-05')
+  }
+]
+
 ---
 
 <Layout>
@@ -57,20 +78,9 @@ const t = useTranslations(lang)
           {t('experience.title')}
         </SectionTitle>
         <div class="max-w-[900px] px-8 w-full">
-          <ExperienceItem
-            jobTitle={t('experience.item-1.jobTitle')}
-            company={t('experience.item-1.company')}
-            startDate={new Date()}
-            description={t('experience.item-1.description')}
-            position="first"
-          />
-          <ExperienceItem
-            jobTitle={t('experience.item-2.jobTitle')}
-            company={t('experience.item-2.company')}
-            startDate={new Date()}
-            description={t('experience.item-2.description')}
-            position="last"
-          />
+          {experienceItems.map((item) => (
+            <ExperienceItem {...item} />
+          ))}
         </div>
       </Section>
       <Section id="skills" class="pt-20">
