@@ -26,4 +26,6 @@ export const translations = {
   'experience.item-2.jobTitle': 'Frontend Developer',
   'experience.item-2.company': 'Midas Consultores',
   'experience.item-2.description': `Led the reengineering of the website for one of the most important brokers in Argentina, using NextJS and TypeScript while ensuring accessibility and application security.\nDrove the migration of multiple projects from an oil company to a Micro Frontends architecture, accelerating the integration of new features and significantly improving the system's maintainability and scalability.`,
+  'language-picker.es.aria-label': 'Switch language to Spanish',
+  'language-picker.en.aria-label': 'Switch language to English',
 } as const satisfies Translations

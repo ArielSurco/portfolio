@@ -1,6 +1,10 @@
 ---
 import ContactButtons from "../components/contact-buttons.astro";
 import Navbar from "../components/navbar.astro";
+
+const title = 'Portfolio - Ariel Surco'
+const description = 'Frontend developer with 3+ years of experience in building scalable and high-impact solutions.'
+
 ---
 
 <!doctype html>
@@ -10,7 +14,8 @@ import Navbar from "../components/navbar.astro";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Portfolio</title>
+		<title>{title}</title>
+		<meta name="description" content={description} />
 	</head>
 	<body class="m-0 w-full min-h-screen bg-neutral-900 overflow-x-hidden">
 		<Navbar />
