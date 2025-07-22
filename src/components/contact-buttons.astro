@@ -2,7 +2,7 @@
 
 import { Image } from 'astro:assets'
 import LinkedinLogo from '../assets/linkedin-logo.svg'
-import GithubLogo from '../assets/github-logo.svg'
+// import GithubLogo from '../assets/github-logo.svg'
 import DownloadIcon from '../assets/download-icon.svg'
 import EmailIcon from '../assets/email-icon.svg'
 import { useTranslations } from '../i18n/utils'
@@ -14,22 +14,22 @@ const t = useTranslations(lang)
 
 const contactLinks = [
   {
-    icon: LinkedinLogo,
+    icon: '/assets/icons/linkedin.svg',
     href: 'https://www.linkedin.com/in/ariel-surco/',
     alt: t('contact.linkedin.alt')
   },
   {
-    icon: GithubLogo,
+    icon: '/assets/icons/github.svg',
     href: 'https://github.com/ArielSurco',
     alt: t('contact.github.alt')
   },
   {
-    icon: DownloadIcon,
+    icon: '/assets/icons/download.svg',
     href: getCVUrl(lang),
     alt: t('contact.download.alt')
   },
   {
-    icon: EmailIcon,
+    icon: '/assets/icons/email.svg',
     href: 'mailto:arielsurcoa@gmail.com',
     alt: t('contact.email.alt')
   }

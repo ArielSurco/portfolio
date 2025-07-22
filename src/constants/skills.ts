@@ -73,6 +73,10 @@ const skills = {
   postgresql: {
     src: '/assets/icons/postgresql.png',
     title: 'PostgreSQL'
+  },
+  typeorm: {
+    src: '/assets/icons/typeorm.png',
+    title: 'TypeORM'
   }
 } as const satisfies Record<string, Skill>
 
@@ -111,6 +115,7 @@ export const skillsByTag: Record<SkillTag, Skill[]> = {
     skills.nodejs,
     skills.mongodb,
     skills.postgresql,
+    skills.typeorm,
     skills.typescript,
     skills.javascript,
     skills.git
