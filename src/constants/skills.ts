@@ -99,7 +99,6 @@ export const skillsByTag: Record<SkillTag, Skill[]> = {
   [SkillTag.FRONTEND]: [
     skills.nextjs,
     skills.react,
-    skills.astro,
     skills.typescript,
     skills.javascript,
     skills.tailwind,

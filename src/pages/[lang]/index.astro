@@ -64,14 +64,6 @@ const experienceItems: ComponentProps<typeof ExperienceItem>[] = [
   <div class="relative overflow-hidden">
     <div class="sections-container w-full h-full top-0 z-0 absolute"/>
     <main class="w-full max-w-[1200px] mx-auto pb-20">
-      <Section id="about" class="px-8 pt-20">
-        <SectionTitle>
-          {t('about.title')}
-        </SectionTitle>
-        <p class="text-slate-100 text-lg whitespace-pre-line">
-          {t('about.description')}
-        </p>
-      </Section>
       <Section id="experience" class="pt-20">
         <SectionTitle>
           {t('experience.title')}
@@ -118,6 +110,14 @@ const experienceItems: ComponentProps<typeof ExperienceItem>[] = [
             technologies={['React', 'Next.js', 'Tailwind']}
           />
         </div>
+      </Section>
+      <Section id="about" class="px-8 pt-20">
+        <SectionTitle>
+          {t('about.title')}
+        </SectionTitle>
+        <p class="text-slate-100 text-lg whitespace-pre-line">
+          {t('about.description')}
+        </p>
       </Section>
     </main>
   </div>
