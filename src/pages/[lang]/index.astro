@@ -10,6 +10,7 @@ import ProjectCard from "../../components/project-card.astro";
 import ExperienceItem from "../../components/experience-item.astro";
 import type { ComponentProps } from "astro/types";
 import { SkillsSectionContent } from "../../components/skills-section-content";
+import ContactButtons from "../../components/contact-buttons.astro";
 
 export function getStaticPaths() {
   return [
@@ -46,9 +47,10 @@ const experienceItems: ComponentProps<typeof ExperienceItem>[] = [
   <section class="w-full h-[calc(100vh-48px)] relative max-h-[600px]" id="home">
     <Image alt="" src={HomeBackground} class="h-full mx-auto min-w-fit right-0 w-full opacity-10 absolute" draggable="false"/>
     <div class="max-w-[1200px] mx-auto flex items-center gap-10 h-full px-6 lg:ps-24 lg:justify-start">
-      <div class="lg:basis-2/3">
+      <div class="lg:basis-2/3 relative">
         <h1 class="uppercase text-4xl lg:text-6xl tracking-widest font-semibold mb-10 bg-gradient-to-r from-teal-600 to-teal-400 bg-clip-text text-transparent">{t('home.title')}</h1>
         <h2 class="text-4xl text-slate-100 font-light">Ariel Surco</h2>
+        <ContactButtons class="flex flex-row absolute left-0 -bottom-12 top-[unset] lg:hidden" />
       </div>
       <div class="basis-1/3 items-center justify-center hidden lg:block">
         <StackOrbit 

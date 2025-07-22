@@ -4,6 +4,13 @@ import { Image } from 'astro:assets'
 import { useTranslations } from '../i18n/utils'
 import { getLangFromUrl } from '../i18n/utils'
 import { getCVUrl } from '../utils/getCVUrl'
+import { cn } from '../utils/cn'
+
+interface Props {
+  class?: string
+}
+
+const { class: className } = Astro.props
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -32,7 +39,7 @@ const contactLinks = [
 ]
 ---
 
-<div class="fixed top-1/3 w-fit h-fit left-6 flex-col gap-4 z-50 hidden lg:flex">
+<div class={cn("fixed top-1/3 w-fit h-fit left-6 flex-col gap-4 z-50 hidden lg:flex", className)}>
   {contactLinks.map((link) => (
     <a href={link.href} target="_blank" title={link.alt}>
       <Image src={link.icon} alt={link.alt} width={30} height={30} />

@@ -5,15 +5,11 @@ import { SkillTagsFilter } from "./skill-tags-filter"
 
 const DEFAULT_FILTER = SkillTag.OVERVIEW
 
-const MAX_SKILLS_PER_ROW = 7
-const MAX_SKILLS_ROWS = 2
-const maxSkillsQuantity = MAX_SKILLS_PER_ROW * MAX_SKILLS_ROWS
-
 export const SkillsSectionContent = () => {
   const [selectedFilter, setSelectedFilter] = useState<SkillTag>(DEFAULT_FILTER)
 
   const filteredSkills = useMemo<Skill[]>(() => {
-    return skillsByTag[selectedFilter].slice(0, maxSkillsQuantity)
+    return skillsByTag[selectedFilter]
   }, [selectedFilter])
 
   return (
