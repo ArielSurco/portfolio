@@ -12,6 +12,8 @@ import type { ComponentProps } from "astro/types";
 import { SkillsSectionContent } from "../../components/skills-section-content";
 import ContactButtons from "../../components/contact-buttons.astro";
 
+export const prerender = true
+
 export function getStaticPaths() {
   return [
     { params: { lang: 'es' } },

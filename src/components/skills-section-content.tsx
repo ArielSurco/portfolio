@@ -17,7 +17,7 @@ export const SkillsSectionContent = () => {
       <SkillTagsFilter selectedFilter={selectedFilter} onFilterChange={(value) => setSelectedFilter(value)} />
       <div className="grid md:grid-cols-7 sm:grid-cols-5 grid-cols-4 gap-10 max-w-fit ">
         {filteredSkills.map((skill) => (
-          <SkillItem src={skill.src} title={skill.title} />
+          <SkillItem key={skill.title} src={skill.src} title={skill.title} />
         ))}
       </div>      
     </div>
