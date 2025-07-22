@@ -41,6 +41,33 @@ const experienceItems: ComponentProps<typeof ExperienceItem>[] = [
   }
 ]
 
+const projectItems: ComponentProps<typeof ProjectCard>[] = [
+  {
+    title: 'Conexa Challenge',
+    demoLink: 'https://conexa-challenge.arielsurco.dev',
+    githubLink: 'https://github.com/ArielSurco/conexa-challenge',
+    image: '/assets/images/rickandmorty.webp',
+    description: `It's a challenge to integrate the Rick & Morty API that shows my skills with Next.js and good practices in development.`,
+    technologies: ['NextJS', 'TypeScript']
+  },
+  {
+    title: 'Expenses Management',
+    description: 'It\'s an app to manage your expenses and incomes, making periodic reports to care your finances.',
+    image: 'https://picsum.photos/200/300',
+    demoLink: 'https://www.google.com',
+    githubLink: 'https://www.google.com',
+    technologies: ['React', 'Next.js', 'Tailwind']
+  },
+  {
+    title: 'Expenses Management',
+    description: 'It\'s an app to manage your expenses and incomes, making periodic reports to care your finances.',
+    image: 'https://picsum.photos/200/300',
+    demoLink: 'https://www.google.com',
+    githubLink: 'https://www.google.com',
+    technologies: ['React', 'Next.js', 'Tailwind']
+  }
+]
+
 ---
 
 <Layout>
@@ -87,30 +114,9 @@ const experienceItems: ComponentProps<typeof ExperienceItem>[] = [
           {t('projects.title')}
         </SectionTitle>
         <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-10">
-          <ProjectCard
-            title="Expenses Management"
-            description="It's an app to manage your expenses and incomes, making periodic reports to care your finances."
-            image="https://picsum.photos/200/300"
-            demoLink="https://www.google.com"
-            githubLink="https://www.google.com"
-            technologies={['React', 'Next.js', 'Tailwind']}
-          />
-          <ProjectCard
-              title="Expenses Management"
-              description="It's an app to manage your expenses and incomes, making periodic reports to care your finances."
-              image="https://picsum.photos/200/300"
-              demoLink="https://www.google.com"
-              githubLink="https://www.google.com"
-              technologies={['React', 'Next.js', 'Tailwind']}
-            />
-          <ProjectCard
-            title="Expenses Management"
-            description="It's an app to manage your expenses and incomes, making periodic reports to care your finances."
-            image="https://picsum.photos/200/300"
-            demoLink="https://www.google.com"
-            githubLink="https://www.google.com"
-            technologies={['React', 'Next.js', 'Tailwind']}
-          />
+          {projectItems.map((item) => (
+            <ProjectCard {...item} />
+          ))}
         </div>
       </Section>
       <Section id="about" class="px-8 pt-20">
