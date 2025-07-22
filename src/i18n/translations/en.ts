@@ -8,7 +8,7 @@ export const translations = {
   'nav.projects': 'Projects',
   'nav.contact': 'Contact',
   'home.title': 'Frontend developer',
-  'home.description': '+3 years of experience. Specialized in developing scalable and high-impact solutions.',
+  'home.description': '3+ years of experience. Specialized in developing scalable and high-impact solutions.',
   'experience.title': 'Experience',
   'about.title': 'About me',
   'about.description': 'I\'ve been immersed in programming since I was 16, working on everything from small projects to more complex solutions. My passion for technology has always been driven by the challenge of finding efficient solutions to real-world problems. In 2023, I started my professional career as a frontend developer, applying my knowledge and learning new tools to tackle technical challenges in real-world projects.\n\nI\'m motivated by the possibility of solving problems in a creative and practical way. One example of this is a WhatsApp bot I developed to manage large groups, improving organization and interaction effectively. My goal is to continue honing my skills and create solutions that make a real impact.',
