@@ -16,10 +16,10 @@ export const getLinks = <T extends Function>(t: T): Link[] => [
     name: t('nav.skills'),
     href: '#skills'
   },
-  {
-    name: t('nav.projects'),
-    href: '#projects'
-  },
+  // {
+  //   name: t('nav.projects'),
+  //   href: '#projects'
+  // },
   {
     name: t('nav.about'),
     href: '#about'
